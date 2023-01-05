@@ -17,6 +17,7 @@ const Textform = (props) => {
     textSet( newtext1);
     props.showMessage('Text successfully duplicated ','success')
   };
+  
   const clear = () => {
     textSet('');
     props.showMessage('Text clear successfully ','success')
@@ -39,23 +40,23 @@ const Textform = (props) => {
                      color:props.mode === 'light'?'black':'white'}}
           ></textarea>
         </div>
-        <button type="submit" className={`btn btn-primary mx-2 text-${props.mode === 'light'?'dark':'light'}`} onClick={uppercase}>
+        <button type="submit" className={`btn btn-primary mx-2 my-1 text-${props.mode === 'light'?'dark':'light'}`} onClick={uppercase}>
           Convert to uppercase
         </button>
-        <button type="submit" className={`btn btn-primary mx-2 text-${props.mode === 'light'?'dark':'light'}`} onClick={lowercase}>
+        <button type="submit" className={`btn btn-primary mx-2 my-1 text-${props.mode === 'light'?'dark':'light'}`} onClick={lowercase}>
           Convert to lowercase
         </button>
-        <button type="submit" className={`btn btn-primary mx-2 text-${props.mode === 'light'?'dark':'light'}`} onClick={duplicate}>
+        <button type="submit" className={`btn btn-primary mx-2 my-1 text-${props.mode === 'light'?'dark':'light'}`} onClick={duplicate}>
           Duplicate
         </button>
-        <button type="submit" className={`btn btn-primary mx-2 text-${props.mode === 'light'?'dark':'light'}`} onClick={clear}>
+        <button type="submit" className={`btn btn-primary mx-2 my-1 text-${props.mode === 'light'?'dark':'light'}`} onClick={clear}>
           Clear
         </button>
       </div>
       <div className="container">
         <h2 className={`text-${props.mode === 'light'?'dark':'light'}`}>Text Summary</h2>
         <p className={`text-${props.mode === 'light'?'dark':'light'}`}>{text.length} words <br/>
-           {text.split(' ').length} character
+           {text.split(' ').filter((element)=>{ return element.length!==0}).length} character
         </p>
         <h3 className={`text-${props.mode === 'light'?'dark':'light'}`}>Preview</h3>
         <p className={`text-${props.mode === 'light'?'dark':'light'}`}>{text}</p>

@@ -1,35 +1,26 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-export default function About() {
-  const [mode, setMode] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-  const [modeText, setModeText] = useState("Enable Dark Mode");
+export default function About(props) {
+  // const [mode, setMode] = useState({
+  //   color: "black",
+  //   backgroundColor: "white",
+  // });
+  const alerts = ()=>{
+    alert(props.mode === 'light');
+  }
+  let mode = {
+    backgroundColor:props.mode === 'light'?'white':'grey',
+    color:props.mode === 'light'?'black':'white'
+  }
 
-  const modechnage = () => {
-    if (mode.color === "white") {
-      setMode({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setModeText("Enable Dark Mode");
-    } else {
-      setMode({
-        color: "white",
-        backgroundColor: "black",
-        border: "1px solid white",
-      });
-      setModeText("Enable light Mode");
-    }
-  };
+  
   return (
     <>
       <div className="conatiner-fluid my-3">
         <div className="accordion" id="accordionExample" style={mode}>
           <div className="accordion-item">
             <h2 className="accordion-header" id="headingOne">
-              <button
+              <button onClick={alerts}
                 className="accordion-button"
                 type="button"
                 style={mode}
@@ -130,11 +121,6 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="conatiner mx-3 my-3">
-        <button onClick={modechnage} className="btn btn-primary" type="button">
-          {modeText}
-        </button>
       </div>
     </>
   );
