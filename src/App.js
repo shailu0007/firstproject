@@ -39,7 +39,12 @@ function App() {
    <Alert alert={alert} />
    <Routes>
            <Route exact path="/" element={<Textform showMessage={showMessage} heading="Enter text to analyze below" mode={mode}/>}/>
+<<<<<<< HEAD
+          <Route exact path="/about" element={<About/>} mode={mode}/>
+          
+=======
           <Route exact path="/about" element={<About />}/>
+>>>>>>> d9a7568549081fd4ee7d5b93e8e13edbdd04a63b
         </Routes>
         </Router>
   );
