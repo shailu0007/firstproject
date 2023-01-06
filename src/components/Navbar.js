@@ -13,14 +13,10 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+          <Link className="nav-link active" aria-current="page" to="firstproject/">Home</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/about">About</Link>
-<<<<<<< HEAD
-          
-=======
->>>>>>> d9a7568549081fd4ee7d5b93e8e13edbdd04a63b
         </li>
         {/* <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
