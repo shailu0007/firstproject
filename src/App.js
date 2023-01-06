@@ -38,7 +38,7 @@ function App() {
    <Navbar title="TextWorld" mode={mode} selectMode={selectMode} />
    <Alert alert={alert} />
    <Routes>
-           <Route exact path="/" element={<Textform showMessage={showMessage} heading="Enter text to analyze below" mode={mode}/>}/>
+           <Route exact path="/firstproject/" element={<Textform showMessage={showMessage} heading="Enter text to analyze below" mode={mode}/>}/>
 <<<<<<< HEAD
           <Route exact path="/about" element={<About/>} mode={mode}/>
           
